@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int choice;
+    cin >> choice;
+
+    switch(choice)
+    {
+        case 1: cout << "Support"; break;
+        case 2: cout << "Billing"; break;
+        case 3: cout << "Technical Issue"; break;
+        case 0: cout << "Connecting to agent"; break;
+        default: cout << "Invalid";
+    }
+
+    return 0;
+} 
