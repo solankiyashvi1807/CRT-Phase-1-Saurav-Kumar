@@ -7,7 +7,6 @@ class Player
 public:
     string name;
     int runs;
-    
 
     void setName(string n)
     {
@@ -17,45 +16,34 @@ public:
     {
         runs = r;
     }
+    virtual void show() = 0; // NUll
 };
 
-
-class Cricketer
+class Cricketer : public Player
 {
 public:
     string country;
-    void setCountry(string s)
+    Cricketer(string s)
     {
         country = s;
     }
-};
 
-
-class Batter : public Cricketer, public Player
-{
-public:
-    int centuries;
-    void setCenturies(int c)
-    {
-        centuries = c;
-    }
     void show()
     {
+        cout << "Child fun call" << endl;
         cout << "Name: " << name << endl;
         cout << "Runs: " << runs << endl;
         cout << "Country: " << country << endl;
-        cout << "Centuries: " << centuries << endl;
     }
 };
+
 int main()
 {
     int runs;
     cin >> runs;
-    Batter c1;
-    c1.setCountry("India");
+    Cricketer c1("India");
     c1.setName("Virat kohli");
     c1.setRuns(runs);
-    c1.setCenturies(43);
     c1.show();
     return 0;
 }
