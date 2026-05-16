@@ -15,7 +15,7 @@ public:
 
         while (i < j)
         {
-            // Skip non-alphanumeric characters
+            
             while (i < j && !isalnum(str[i]))
             {
                 i++;
@@ -26,7 +26,7 @@ public:
                 j--;
             }
 
-            // Compare characters ignoring case
+            
             if (tolower(str[i]) != tolower(str[j]))
             {
                 return false;
